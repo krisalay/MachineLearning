@@ -1,4 +1,5 @@
-var plotly = require('plotly')('krisalay', 'uH6qKm6jCUVTlXoN5Z8v');
+var config = require('../config');
+var plotly = require('plotly')(config.PLOTLY_USERNAME, config.PLOTLY_API_KEY);
 module.exports = {
 	scatter_plot: function(coor_x,coor_y){
 		var trace1 = {

@@ -14,7 +14,7 @@ for(var i =0; i<coor_json.length; i++){
 var m = y_coor.length;
 var x = [];
 var y = [];
-//plot.scatter_plot(coor_x,coor_y);
+plot.scatter_plot(x_coor,y_coor);
 for(var j=0; j<m;j++){
 	var obj1 = [];
 	var obj2 = [];
@@ -31,5 +31,6 @@ var alpha = 0.01;
 var initial_cost = cost(x,y,theta);
 console.log('initial cost: '+initial_cost)
 theta = gradientDescent(x,y,theta,alpha,iterations);
-console.log(theta);
-console.log(math.multiply([1, 1],theta));
+console.log('theta: '+theta);
+console.log('Prediction for x=10')
+console.log(math.multiply([1, -10],theta));
